@@ -11,7 +11,7 @@ export default class extends Controller {
     const lng = 13.437641
     const lat = 52.494857
 
-    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat},museums.json?access_token=pk.eyJ1IjoiamlhY292b3p6aSIsImEiOiJjbGExYTU3bTQwNWhrM3FvM3NvdDA5ZndmIn0.t699gs3HWXZ0cLccVxz8-A`)
+    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat},museums.json?access_token=${ENV['MAPBOX_TOKEN']}`)
       .then((response) => response.json())
       .then((data) => {
         // data.features.forEach(museum)
